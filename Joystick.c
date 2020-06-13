@@ -50,9 +50,9 @@ typedef enum {
 	FLY
 } Modes; 
 
-Modes mode = COLLECTING;
+Modes mode = RELEASING;
 int eggChecks = 330; 
-int numBoxes = 13; 
+int numBoxes = 5; 
 
 static const command sync[] = {
 	// Setup controller
@@ -107,9 +107,11 @@ static const command grabColumn[] = {
 
 static const command spin[] = {
 	//20 cycle 
-	{SPIN, 2800}
+	  {SPIN, 2800}
 	//40 cycle
 	//{SPIN, 4900}
+	//15 cycle
+	//{SPIN, 2190}
 };
 
 //move left a certain number of times first if needed 
